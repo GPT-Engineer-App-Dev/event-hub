@@ -1,7 +1,10 @@
 import { Container, Text, VStack, Heading, Button } from "@chakra-ui/react";
 import { FaCalendarAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={4}>
@@ -14,7 +17,7 @@ const Index = () => {
           colorScheme="teal"
           size="lg"
           mt={6}
-          onClick={() => alert("Feature coming soon!")}
+          onClick={() => navigate("/create-event")}
         >
           Get Started
         </Button>
